@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About - Know About Us {% endblock title %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/about.css'%}">
+</head>
+<body>
+    <div class="container">
+    <div class="card">
+        <img src="{% static 'img/udoy.jpg'%}">
+        <div class="container">
+          <h4><b>Saifur Rahman - </b></h4>
+          <p>CEO OF ICODER</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="{% static 'img/udoy.jpg'%}">
+        <div class="container">
+          <h4><b>Sundar Pichai - </b></h4>
+          <p>CEO OF GOOGLE</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="{% static 'img/udoy.jpg'%}">
+        <div class="container">
+          <h4><b>Harry - </b></h4>
+          <p>Programmer</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="{% static 'img/udoy.jpg'%}">
+            <div class="container">
+              <h4><b>Mosh - </b></h4>
+              <p>SOFTWER ENGINNER</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="{% static 'img/udoy.jpg'%}">
+            <div class="container">
+              <h4><b>Stive Jobs - </b></h4>
+              <p>CEO OF APPLE</p>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="{% static 'img/udoy.jpg'%}">
+            <div class="container">
+              <h4><b>Jef Bezos - </b></h4>
+              <p>CEO OF AMAZON</p>
+            </div>
+          </div>
+        </div>
+</body>
+</html>
+
+{% endblock body %}

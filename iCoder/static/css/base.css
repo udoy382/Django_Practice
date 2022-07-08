@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background: black;
+
+    /* New add this 3 line of code work or not i dont know */
+    position: sticky;
+    margin: 0;
+    z-index: 100%;
+}
+
+.left h4{
+    font-size: 25px;
+    margin: 20px 20px;
+    color: #fff;
+}
+
+.mid ul li{
+    display: inline-block;
+    margin: 20px 20px;
+    list-style: none;
+}
+
+.mid ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.mid ul li a:hover{
+    color: gray;
+}
+
+.right{
+    display: inline-block;
+    margin: 20px 20px;
+}
+
+.search input{
+    margin-right: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+}
+
+.search{
+    display: inline-block;
+}
+
+.right-btn{
+    display: inline-block;
+}
+
+.right-btn input{
+    display: inline-block;
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    padding: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.right-btn input:hover{
+    /* color: gray; */
+    color: gray;
+}
+
+
+.new-section{
+    display: inline-block;
+    color: red;
+}
+
+.header-after-txt{
+    text-align: center;
+    font-size: 20px;
+}
+
+.header-after-txt strong{
+    display: inline-block;
+    align-items: center;
+    border: 1px solid black;
+    padding: 3px 23px;
+}

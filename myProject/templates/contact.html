@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Contact | Fill The Form Here {% endblock title %}
+
+{% block body %}
+
+<div class="container bg-dark text-light p-4 my-4">
+    <form action="/contact" method="post">
+      {% csrf_token %}
+        <div class="mb-3 my-4">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username" aria-describedby="usernameHelp" placeholder="Enter Your Username">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Full name">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+        </div>
+        <div class="mb-3">
+          <label for="password1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter Your Password">
+        </div>
+        <div class="mb-3">
+          <label for="password2" class="form-label">Re-Password</label>
+          <input type="password" class="form-control" id="password2" name="password2" placeholder="Enter Re-Password">
+        </div>
+        <div class="mb-3">
+          <textarea name="textarea" id="textarea" name="textarea" cols="170" rows="5" placeholder="Type Your Text Here"></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-success">Submit</button>
+      </form>
+</div>
+
+{% endblock body %}

@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-image: url(../img/bg1.png); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 100%; */
+    background:seagreen;
+}
+
+#f-section{
+    display: inline-block;
+}
+
+.container{
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    margin: 100px 50px;
+}
+
+.container h2{
+    font-size: 30px;
+}
+
+.container p{
+    font: 22px;
+}
+
+.btn{
+    margin: 40px 20px;
+    border: 2px solid #fff;
+    padding: 15px 40px;
+    background: transparent;
+    background: lightsteelblue;
+    color: black;
+    transition: 0.5s;
+}
+
+.btn:hover{
+    border: 1px solid #fff;
+    background: brown;
+}

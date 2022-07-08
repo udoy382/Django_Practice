@@ -1,0 +1,33 @@
+body{
+    background-color: #f2f2f2;
+    color: black;
+}
+
+.container{
+    width: 40%;
+    border: 2px solid black;
+}
+
+.container h2{
+    background-color:darkgray ;
+    padding: 5px 20px;
+}
+
+.p p{
+    font-size: 20px;
+    padding: 5px 20px;
+}
+
+.btn{
+    margin-left: 40%;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    padding: 12px 35px;
+    cursor: pointer;
+    background: transparent;
+    transition: 0.7s;
+}
+
+.btn:hover{
+    background: gray;
+}

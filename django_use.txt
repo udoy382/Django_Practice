@@ -1,0 +1,98 @@
+HOW TO USE DJANGO EVERYTHING IS HERE!
+
+step-1 : First install django. [ pip install django ]
+
+step-2 : Second We always refer django documentation [ open django documentation in browser ]
+
+step-3 : Creat django project [ django-admin startproject mysite ]
+
+step-4 : Change directory and go our project directory [ cd mysite ]
+
+step-5 : run the server [ python manage.py runserver ]
+
+DJANGO WORK WITH, HTML / CSS / JAVASCRIPT AND WE ALSO USE PYTHON
+
+step-6 : Know about all the file or folder in mysite django project, it is very importent to know about all the file or fonder in project or app
+
+step-7 : Creat a app [ python manage.py startapp home ] we creat multipul app also
+
+step-8 : Creat a url file  [ urls.py ] in home app
+
+IN THE PROJECT urls.py CREAT A urlpatterns LIKE THIS [ path('home/', include('home.urls')) ] AND IMPORT [ include ]
+
+THEN IN THE  APP urls.py CREAT A urlpatterns LIKE THIS [ path('boy', views.home, name='home') ] AND IMPORT [ from home import views ]
+
+THEN IN THE APP views.PY CREAT FUNCTION AND IMPORT [ from django.http import HttpResponse ]
+
+KNOW ABOUT MVT OR DTL~~
+MVT = Model, View and Template
+DTL = Django, Template, Lnaguage
+
+WHEN CREAT PATH ON HOME URLS, USE PATH LIKE THIS [ path('about', views.about, name='about'), ]
+
+TEMPLATES~~
+WHEN I USE TEMPLATES SO WE MUST RETURN IN Views.py IN APP LIKE THIS [ return render(request, 'home.html') ] FIRST ARGUMENT IS [ request ] SECOND ARGUMENT IS TEMPLATES FILE NAME LIKE THIS [ 'home.html' ]
+
+THEN WE MUST ADD [ Template ] NAME IN, setting.py > TEMPLATES > 'DIRS' ['templates'] LIKE THIS
+
+THEN CREAT A templates FOLDER INSIDE THE PROJECT NOT APP... portfolio >  [ templates ] <-- THIS IS A FOLDER NAME 
+
+THEN CREAT INSIDE THE templates FOLDER [home.html] OR ANY HTML FILE
+
+NOW TIME TO DESIGN HTML PAGE
+
+MODEL~~
+step-1 : GO TO CONTACT PAGE AND SET INSIDE FORM TAG  [action="/contact" method="POST" ]
+
+step-2 : THEN COME TO THE models.py AND SET ALL THE VALUE LIKE THIS [ name = models.CharField(max_length=50) ] OBESLY SIMILUR TO FORM [ name='name' ] LIKE THIS
+
+step-3 : NEXT COME TO THE views.py CONTACT FUNCTION THEN SET ALGORIDUM
+
+DATABASE~~
+step-1 : CREAT MODEL LIKE THIS [ name = models.CharField(max_length=50) ]
+
+step-2 : CREAT A TABLE IN DATABASE [ python manage.py makemigrations ] THEN [ python manage.py migrate]
+
+step-3 : IMPORT A MODEL IN views.py LIKE THIS [ from home.models import contact ]
+
+AFTER THEN WHEN WE SAVE THIS CHANGES WE SOW SOME ERROR LIKE THIS [ Model class home.models.contact doesn't declare an explicit app_label and isn't in an application in INSTALLED_APPS. ] THIS ERROR MEENS WE ADD APP NAME IN INSTALLED_APPS LIKE THIS [ 'home', ] AND MUST USE COMA AFTER WRITTEN APP NAME
+
+step-4 : WE ADD THIS LINE OF CODE IN views.py CONTACT FUNCTION [ ins = contact(name=name, username=username, email=email, number=number, textarea=textarea) ] next line [ ins.save() ]
+
+step-5 : REGISTER MODEL INSIDE admin.py FILE LIKE THIS [ admin.site.register(Contact) ] AND IMPORT FILE LIKE THIS [ from home.models import Contact ]
+
+step-6 : AFTER REGISTER OURT MODEL CREAT A SUPERUSER LIKE THIS [ python manage.py creatsuperuser ] THEN SET [ Username ] AND [ Email ] AND [ Password ] 
+
+step-7 : DJANGO ADMIN CUSTOMIZATION IN urls.py(home)
+
+STATIC FILE~~
+step-1 : CREAT A [ static ] FOLDER OUT THE PROJECT APP
+
+step-2 : GO TO SETTING LAST, THEN CREAT THIS: -->
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+
+USE LOAD STATIC~~
+
+FIRST WE MUST USE THIS IN HOME OR ANY OTHE PAGAE WHERE WE WANT LIKE THIS [ {% load static %} ] THEN USE LOAD STATIC IN OUT PAGE
+
+
+TEMPLATES INHERETANGE~~
+
+step-1: CREAT A [ base.html ] IN TEMPLATES FOLDER
+
+LEARN DTL [ DTL = DJANOG TEMPLATES LANGUAGE ] OPEN GOOGLE, SEARCH [ djanog templates language ] THEN OPEN DJANGO [ documentation ]
+
+
+SEARCH~~
+
+WHEN WE WORK WITH SEARCH, SO FIRST OF ALL WE CREAT A PAGE IN TEMPLATES FONDER LIKE [ search.html ] THEN ADD A DJANGO TEMPLATES CODE LIKE [ {% extends 'base.html'%}] ANS SO ON, TEHN CAME TO THE base.html THEN ADD [action='/search'] [ method='GET'] IN THE FORM IN BUTTON WE MUST ADD GET METHOD FOT GET THE SEARCH RESULTS, THEN CREAT A SEARCH FUNCTION IN views.py FOR ADD A SEARCH LOGIC 
+
+
+STATIC CONNECT~~
+
+{% load static %}
+<link rel="stylesheet"  href="{%  static  'css/style.css'  %}">

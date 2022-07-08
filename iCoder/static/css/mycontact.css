@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.txt{
+    text-align: center;
+}
+
+.txt h3{
+    display: inline-block;
+    font-size: 30px;
+    border: 2px solid black;
+    padding: 23px 140px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+
+.form{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form div{
+    padding: 15px;
+}
+
+.form div input{
+    padding: 10px 106px;
+    border-radius: 10px;
+}
+
+.btn{
+    padding: 6px 115px;
+    border-radius: 20px;
+    background: transparent;
+    cursor: pointer;
+}

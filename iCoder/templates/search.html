@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Search Results {% endblock title %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/blog.css'%}">
+</head>
+<body>
+    <div class="search-container" style="text-align: center; font-size: 30px; margin-top: 10px;">
+
+        <h3 style="margin-bottom: 50px;">Your Search Results:</h3>
+
+        {% if allPost|length < 1 %}
+        <p>Your search - <b>{{query}}</b> - did not match any documents.</p>
+        <h3 style="padding: 20px;"> <i>Suggestions:</i></h3>
+        <ul>
+          <li> ~ Make sure that all words are spelled correctly.</li>
+          <li> ~ Try different keywords.</li>
+          <li> ~ Try more general keywords.</li>
+          <li> ~ Try fewer keywords.</li>
+        </ul>
+        {% endif %}
+
+        {% for items in allPost %}
+
+        <h2>{{items.title}}</h2>      
+        <div>      
+          <div class="p">
+            <p>{{items.content|slice:245}}...</p>
+          </div>
+          <a href="/blogpost/{{items.slug}}" class="text-dark"><button class="btn btn-primary">Read More...</button></a>
+         
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</body>
+</html>
+
+{% endblock body %}

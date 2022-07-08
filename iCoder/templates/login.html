@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock title %}
+{% load static %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="{% static  'css/mycontact.css' %}">
+</head>
+<body>
+    <h2></h2>
+    <div class="txt">
+        <h3>Fill The Form To Login</h3>
+    </div>
+    <form action="/login" class="form" method="POST">
+        {% csrf_token %}
+        <div class="all-form">
+            <!-- Use required for user not blank anything  -->
+            <input type="text" name="loginusername" id="username" placeholder="Enter Your Username" required>
+        </div>
+        <div class="all-form">
+            <input type="password" name="loginpassword1" id="password1" placeholder="Enter Your Password" required>
+        </div>
+        <div class="all-form">
+            <input type="password" name="loginpassword2" id="password2" placeholder="Enter Re-Password" required>
+        </div>
+        <input type="submit" value="Submit" class="btn">
+    </form>
+</body>
+</html>
+
+{% endblock body %}

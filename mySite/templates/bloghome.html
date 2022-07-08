@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+<h1 class="my-3 text-center">Welcome to Mountain coders Blog</h1>
+
+{% for blog in blogs %}
+
+<div class="card my-4">
+    <div class="card-body">
+        <h5 class="card-title text-dark"> <a href="/blogpost/{{blog.slug}}" class="text-dark">{{blog.title}}</a></h5>
+        <p class="card-text">{{blog.content|slice:245}}...</p>
+    </div>
+    <a href="/blogpost/{{blog.slug}}" class="text-dark"><button class="btn btn-primary">Read More...</button></a>
+</div>
+
+{% endfor %}
+</div>
+{% endblock body %}
